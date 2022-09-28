@@ -16,4 +16,17 @@ function newGame() {
   if (game % 2 != 0){
     turn = 1;
   }
+  while (count < 21){
+    if (turn % 2 != 0){
+      cpuTurn();
+    }
+    else {
+      playerTurn();
+    }
+    if (count < 21){
+      turn++;
+    }
+  }
+  return endGame();
 }
+
